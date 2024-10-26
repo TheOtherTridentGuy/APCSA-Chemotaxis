@@ -42,6 +42,7 @@ void setup()
    int biasareay;
    int biasx;
    int biasy;
+   int[] biasrgb;
    pixel(int x, int y, int[] rgb){
      this.x = x;
      this.y = y;
@@ -65,6 +66,29 @@ void setup()
        }else{  
          this.y += rand(0,2)==0?-1:1;
        }
+       // do rgb
+       if(this.rgb[0] < this.biasrgb[0]){
+         this.rgb[0] += rand(0,2);
+       }else if(this.y > this.biasrgb[0]){
+         this.rgb[0] -= rand(0,2);
+       }else{  
+         this.rgb[0] += rand(0,2)==0?-1:1;
+       }
+       if(this.rgb[1] < this.biasrgb[1]){
+         this.rgb[1] += rand(0,2);
+       }else if(this.y > this.biasrgb[1]){
+         this.rgb[1] -= rand(0,2);
+       }else{  
+         this.rgb[1] += rand(0,2)==0?-1:1;
+       }
+       if(this.rgb[2] < this.biasrgb[2]){
+         this.rgb[2] += rand(0,2);
+       }else if(this.y > this.biasrgb[2]){
+         this.rgb[2] -= rand(0,2);
+       }else{  
+         this.rgb[2] += rand(0,2)==0?-1:1;
+       }
+       
      }else{
        this.x += rand(0,2)==0?-1:1;
        this.y += rand(0,2)==0?-1:1;
@@ -86,6 +110,10 @@ void setup()
            bestx = x;
            besty = y;
            bestscore = score;
+           System.out.print(x);
+           System.out.print(y);
+           System.out.println(score);
+           this.biasrgb = image[x][y];
          }
        }
      }
