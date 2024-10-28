@@ -86,9 +86,6 @@ void setup()
            bestx = x;
            besty = y;
            bestscore = score;
-           System.out.print(x);
-           System.out.print(y);
-           System.out.println(score);
          }
        }
      }
