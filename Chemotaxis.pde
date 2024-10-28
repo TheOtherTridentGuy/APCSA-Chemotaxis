@@ -1,4 +1,4 @@
-[/pixel[] pixels;
+pixel[] pixels;
 int height = 200;
 int width = 200;
 int[][][] biasimage = {
