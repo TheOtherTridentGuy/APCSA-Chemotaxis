@@ -1,4 +1,4 @@
-pixel[] pixels;
+[/pixel[] pixels;
 int height = 200;
 int width = 200;
 int[][][] biasimage = {
@@ -110,9 +110,6 @@ void setup()
            bestx = x;
            besty = y;
            bestscore = score;
-           System.out.print(x);
-           System.out.print(y);
-           System.out.println(score);
            this.biasrgb = image[x][y];
          }
        }
