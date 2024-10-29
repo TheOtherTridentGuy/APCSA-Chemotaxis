@@ -99,7 +99,7 @@ void setup()
      this.biasareay = height/image.length;
      for(int y=0; y<image.length; y++){
        for(int x=0; x<image[0].length; x++){
-         int xydist = (int)Math.sqrt(Math.pow(this.x-(x+this.biasareax), 2)+Math.pow(this.y-(y+this.biasareay), 2));
+         int xydist = (int)Math.sqrt(Math.pow(this.x-(x*this.biasareax), 2)+Math.pow(this.y-(y*this.biasareay), 2));
          int rgbdist = (int)Math.sqrt(Math.pow(this.rgb[0]-image[x][y][0], 2)+Math.pow(this.rgb[1]-image[x][y][1], 2)+Math.pow(this.rgb[2]-image[x][y][2], 2));
          int score = xydist+(rgbdist*colortune);
          if(score < bestscore){
